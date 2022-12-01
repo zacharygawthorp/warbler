@@ -9,6 +9,9 @@ from models import db, connect_db, User, Message
 
 import requests, json, random
 
+"""Key needed to get requests from News API."""
+API_KEY = os.environ.get('API_KEY')
+
 CURR_USER_KEY = "curr_user"
 
 """Base url for API call."""
