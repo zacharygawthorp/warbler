@@ -1,0 +1,31 @@
+{% extends 'home-anon.html' %}
+
+{% block body_class %}onboarding{% endblock %}
+
+{% block modal %}
+
+<div id="email-modal" class="row justify-content-md-center">
+  <div id="modal-content" class="col-md-7 col-lg-5">
+    <a href="{{url_for('homepage')}}" class="close-btn">&times;</a>
+    {% for category, message in get_flashed_messages(with_categories=True) %}
+    <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+    <h2 class="join-message">Welcome back.</h2>
+
+    <form method="POST" id="user_form">
+      {{ form.hidden_tag() }}
+
+      {% for field in form if field.widget.input_type != 'hidden' %}
+      {% for error in field.errors %}
+      <span class="text-danger">{{ error }}</span>
+      {% endfor %}
+      {{ field(placeholder=field.label.text, class="form-control") }}
+      {% endfor %}
+
+      <button class="btn btn-primary btn-block btn-lg">Log in</button>
+      <a href="/guest-login" class="btn btn-primary btn-block btn-sm">Continue as guest</a>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

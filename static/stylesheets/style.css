@@ -1,0 +1,764 @@
+/* ====================== General */
+
+.main {
+  width: 60%;
+  float: left;
+}
+
+.form-control:focus {
+  box-shadow: rgb(29, 155, 240) 0px 0px 0px 1px;
+}
+
+body.error-404 {
+  background-color: #1da1f2;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-weight: 700;
+  border-radius: 50px;
+  width: 30%;
+  border: none;
+}
+
+#like-btn {
+  width: 100%;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+#sign-up-btn {
+  background-color: white;
+  color: black;
+}
+
+#login-btn {
+  background-color: rgb(29, 155, 240);
+  color: white;
+}
+
+.guest-login-btn {
+  background-color: black !important;
+  border: 1px solid rgb(29, 155, 240);
+  color: rgb(29, 155, 240) !important;
+}
+
+.home-spacer {
+  height: 5vh;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.lines-text {
+  color: white;
+  display: grid;
+  width: 30%;
+  margin-bottom: 0;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.lines-text::before,
+.lines-text::after {
+  content: "";
+  height: 2px;
+  background-color: rgb(47, 51, 54);
+  display: block;
+}
+
+.list-group-item {
+  background-color: #e6ecf0;
+}
+
+/* ======================= Nav */
+
+.navbar {
+  background-color: #fff;
+  height: 46px;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 9999;
+}
+
+.navbar a {
+  color: #66757f;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #1c94e0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand > img {
+  display: inline-block;
+  margin-bottom: 2px;
+  margin-right: 5px;
+  width: 20px;
+  border-radius: 2px;
+}
+
+.nav > li > a > img {
+  width: 32px;
+  border-radius: 32px;
+}
+
+ul.nav.navbar-nav {
+  align-items: center;
+}
+
+ul.nav.navbar-nav li {
+  margin: 0 0.5rem;
+  display: flex;
+}
+
+nav form.navbar-form {
+  display: flex;
+  position: relative;
+}
+
+#search.form-control {
+  border-radius: 20px;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: left;
+  padding-left: 85px;
+  font-size: 13px;
+  padding-right: 28px;
+  background-color: #f5f5f5;
+  border: none;
+}
+
+#search.form-control + .btn {
+  position: absolute;
+  top: 2px;
+  bottom: 4px;
+  z-index: 1;
+  padding: 0;
+  color: #66757f;
+}
+
+#search.form-control + .btn:active,
+#search.form-control + .btn:focus {
+  box-shadow: none;
+}
+
+#search:active,
+#search:focus {
+  box-shadow: none;
+  border: 1px solid white;
+}
+
+#text {
+  border: none;
+}
+
+.search-form {
+  position: relative;
+  margin-top: 10px;
+}
+
+/* on "onboarding" pages (signup & login), the navbar is
+   different: no search box, the logo is centered, and it has
+   a background color.
+ */
+
+.onboarding > .navbar {
+  display: none;
+}
+
+.onboarding > .right-sidebar,
+.onboarding > .left-sidebar {
+  display: none;
+}
+
+.onboarding .navbar-header {
+  margin: 0 auto;
+}
+
+.onboarding .navbar-brand {
+  margin: 0;
+}
+
+.onboarding .navbar-brand span {
+  display: none;
+}
+
+.onboarding .nav.navbar-nav.navbar-right {
+  position: absolute;
+  right: 16px;
+}
+
+.onboarding > .navbar a {
+  color: #fff;
+}
+
+.onboarding > .navbar form.navbar-form {
+  display: none;
+}
+
+.onboarding {
+  background-color: rgb(0, 0, 0);
+}
+
+@media (max-width: 468px) {
+  nav form.navbar-form {
+    display: none;
+  }
+}
+
+nav + .container {
+  margin-bottom: 1rem;
+}
+
+/* ===================== User profile */
+
+.join-message {
+  margin-top: 100px;
+}
+
+#profile-image,
+#profile-avatar {
+  border-radius: 100%;
+  display: block;
+  margin-left: -15px;
+}
+
+#profile-image {
+  margin: 0 auto 15px;
+  width: 100%;
+}
+
+#profile-avatar {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #fff;
+  margin-top: -120px;
+  z-index: 1;
+  position: relative;
+  box-shadow: 0 1px 1px rgba(136, 153, 166, 0.15);
+}
+
+.timeline-image {
+  border-radius: 48px;
+  height: 48px;
+  width: 48px;
+  margin-top: 2px;
+}
+
+.message-area,
+.timeline-image {
+  display: inline-block;
+}
+
+.message-area {
+  margin-left: 10px;
+}
+
+#warbler-hero {
+  height: 360px;
+  margin-top: -16px;
+  opacity: 0.7;
+  background-size: cover;
+  background-position: top center;
+}
+
+.full-width {
+  width: 100vw;
+  margin: 0 -50vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+}
+
+.row.full-width {
+  background-color: #fff;
+  margin-top: -80px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  height: 60px;
+  align-items: center;
+}
+
+.user-stats > .ml-auto {
+  display: flex;
+  align-items: center;
+}
+
+.user-stats > .ml-auto .btn {
+  min-width: 105px;
+  padding: 6px 16px;
+}
+
+.stat {
+  text-align: center;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 14px 15px 7px;
+  line-height: 1;
+}
+
+.stat > .small {
+  color: #657786;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+}
+
+.stat > .small + h4 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 3px;
+}
+
+#messages {
+  position: relative;
+}
+
+#messages .message-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#messages .list-group-item a:not(.message-link) {
+  position: relative;
+  z-index: 2;
+}
+
+#messages .list-group-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 7px 20px 12px;
+}
+
+#messages:not(.no-hover) .list-group-item:hover {
+  background-color: #e6ecf0;
+}
+
+#sidebar-username {
+  margin-top: 30px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 28px;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .full-width .user-stats .stat {
+    display: none;
+  }
+}
+
+.user-location {
+  color: #657786;
+}
+
+/* ==================== User cards on follower/following pages */
+
+.user-card {
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  position: relative;
+  background: white;
+  margin-top: 20px;
+}
+
+.user-card > div {
+  position: absolute;
+  background: white;
+}
+
+.user-card form {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.user-card form .btn {
+  min-width: 89px;
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+.card-hero {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.card-image {
+  border: 3px solid #fff;
+  border-radius: 70px;
+  height: 70px;
+  width: 70px;
+  margin-top: -35px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-link {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.card-link > p {
+  position: absolute;
+}
+
+.user-cards {
+  margin-bottom: 20px;
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.image-wrapper {
+  width: 100%;
+  padding-bottom: 36%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+p.card-bio {
+  margin: 2em 10px 0;
+}
+
+/* ============================ Signed out home */
+
+.bi-twitter {
+  color: white;
+  height: 45vh;
+  width: 45vh;
+}
+
+.home-hero-signup > img {
+  width: 50px;
+  height: auto;
+}
+
+.home-hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 55vw;
+  left: 0;
+  z-index: -1;
+  background-image: url(/static/images/signed-out-home.jpg);
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.home-hero-signup {
+  height: 100vh;
+  padding: 20px;
+  margin-top: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 55vw;
+  z-index: -1;
+  left: 84%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 40px 0;
+}
+
+.header-text-div {
+  margin-bottom: 40px;
+}
+
+.header-text {
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.header-sub-text-div {
+  margin-bottom: 20px;
+}
+
+.header-sub-text-guest-div {
+  margin-top: 15vh;
+  margin-bottom: 30px;
+}
+
+.header-sub-text {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.sub-text-home {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.home-hero .btn {
+  text-shadow: none;
+  position: relative;
+  z-index: 1;
+  width: 150px;
+}
+
+.home-hero h1 {
+  margin-bottom: 4rem;
+}
+
+.home-hero:before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* ============================== Signed in Home */
+
+#home-aside > .user-card {
+  margin-top: 0;
+  overflow: hidden;
+}
+
+#home-aside > .user-card .card-link {
+  display: flex;
+}
+
+#home-aside > .user-card .card-link > p {
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+#home-aside > .user-card .stat {
+  padding: 14px 0 7px;
+}
+
+#home-aside > .user-card .user-stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+#home-aside > .user-card > div {
+  width: 100%;
+}
+
+#home-aside .card-link > p {
+  position: relative;
+}
+
+#home-aside .stat h4 {
+  text-align: left;
+}
+
+.home-link-logout {
+  margin: 20px 0 0 20px;
+}
+
+/* ========================== Right Sidebar */
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  width: 200px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+#home-aside-right > h5 {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 0;
+  font-weight: 700;
+  padding: 20px;
+  background-color: rgb(247, 249, 249);
+}
+
+.article {
+  display: flex;
+  padding: 20px;
+  background-color: rgb(247, 249, 249);
+}
+
+#article-id {
+  text-decoration: none;
+  color: black;
+}
+
+.article:hover {
+  background-color: #f5f5f5;
+}
+
+#home-aside-right a:nth-last-of-type(1) > div:first-child {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#img-container {
+  width: 125px;
+}
+
+#img-container img {
+  width: 100%;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+/* ========================== Signup/Login */
+
+#user_form input.form-control {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+/* =========================== Modal */
+
+#email-modal {
+  position: fixed;
+  z-index: 1;
+  margin-left: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(91, 112, 131, 0.4);
+}
+
+#modal-content {
+  background: black;
+  border-radius: 10px;
+  margin: 10% auto;
+  max-width: 600px;
+  height: 650px;
+  padding: 40px 80px 40px 80px;
+}
+
+#modal-content .join-message {
+  color: white;
+}
+
+#modal-content a {
+  text-decoration: none;
+}
+
+.close-btn {
+  top: 2%;
+  right: 3%;
+  font-size: 1.5rem;
+  z-index: 1;
+  cursor: pointer;
+  color: white;
+}
+
+/* =========================== Edit Page */
+
+.edit-btn-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn-area > .btn {
+  width: 48%;
+}
+
+/* =========================== Message Show page */
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #62676c;
+}
+
+#messages.no-hover .message-area {
+  width: 100%;
+}
+
+#messages.no-hover .message-heading {
+  display: flex;
+  justify-content: space-between;
+  height: 47px;
+  margin-top: 3px;
+}
+
+#messages.no-hover .message-heading .btn {
+  min-width: 105px;
+}
+
+.messages-like {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 1;
+}
+
+.single-message {
+  font-size: 27px;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+}
+
+/* ================================ 404 page */
+
+.message-404 {
+  color: white;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.message-404 a {
+  color: white;
+}
+
+.message-404 > h4.display-4 {
+  font-size: 2.5em;
+}
+
+.message-404 .form-inline input {
+  flex: 1;
+}
+
+#error-page-search {
+  margin-left: 25%;
+}

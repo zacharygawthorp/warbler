@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block body_class %}onboarding{% endblock %}
+
+{% block content %}
+<div class="home-hero">
+</div>
+<div class="home-hero-signup">
+  <img src="/static/images/warbler-logo.png">
+  <div class="hero-signup">
+    <div class="header-text-div">
+      <span class="header-text">Happening now</span>
+    </div>
+    <div class="header-sub-text-div">
+      <span class="header-sub-text">Join Warbler today.</span>
+    </div>
+    <div>
+      <a href="/signup" id="sign-up-btn" class="btn btn-primary">Sign up</a>
+    </div>
+    <div class="home-spacer">
+      <h6 class="lines-text">or</h6>
+    </div>
+    <div>
+      <a href="/login" id="login-btn" class="btn btn-primary">Login</a>
+    </div>
+  </div>
+  <div class="header-sub-text-guest-div">
+    <span class="sub-text-home">Not ready to sign up? Click button below to continue as a guest.</span>
+  </div>
+  <div class="guest-login-div">
+    <a href="/guest-login" class="btn btn-primary guest-login-btn">Continue as guest</a>
+  </div>
+</div>
+{% block modal %}{% endblock %}
+{% endblock %}
