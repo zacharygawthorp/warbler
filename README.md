@@ -2,9 +2,9 @@
 
 ## Description
 
-The goal of this site is to allow users to search for their favorite Marvel Comics Characters. The site will provide information such as, character name, a brief description of the character, and comic appearances. Users will also be able to keep track of their favorite characters by adding them to a favorites list.
+The Warbler Social App is a twitter clone social media experience. It uses Bcrypt for authentication and SQLAlchemy for database management. It runs off of a Flask server and uses Jinja for template-based page rendering.
 
-The site is deployed on Heroku and can be found [here](https:)
+The site is deployed on Heroku and can be found [here](https://warbler-social-app.herokuapp.com/)
 
 ![Homepage Image](static/images/warbler-cover.png)
 
